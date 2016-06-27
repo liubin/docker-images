@@ -16,3 +16,6 @@ RUN cd /tmp && \
   apk del builddeps && rm -rf /var/cache/apk/* && \
   cd / && rm -rf /tmp/gnuplot*
 
+
+ENV PATH $PATH:/usr/local/bin
+
