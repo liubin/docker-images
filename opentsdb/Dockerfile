@@ -6,9 +6,9 @@ ADD opentsdb.conf /etc/
 
 RUN cd /tmp && \
   wget http://downloads.sourceforge.net/project/gnuplot/gnuplot/5.0.3/gnuplot-5.0.3.tar.gz && \
-  tar zxvf gnuplot-5.0.3.tar.gz  && \
+  tar zxf gnuplot-5.0.3.tar.gz  && \
   cd gnuplot-5.0.3 && \
-  apk add gd gd-dev libpng libpng-dev  && \
+  apk --update add gd gd-dev libpng libpng-dev  && \
   apk --update add --virtual builddeps build-base autoconf automake git python && \
   ./configure && \
   make && \
