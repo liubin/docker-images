@@ -28,11 +28,9 @@ EXPOSE 49153-59153
 # CMD ["host1,host2,host3"]
 
 RUN apt-get install -y openssh-server
+ADD sshd_config /etc/ssh/sshd_config
 
-RUN sed -ri 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config
-RUN sed -ri 's/#Port 22/Port 2222/g' /etc/ssh/sshd_config
 RUN mkdir -p /var/run/sshd && chmod 755 /var/run/sshd
-RUN mkdir /root/.ssh && chmod -R g-rwx,o-rwx /root/.ssh
 
 EXPOSE 2222
 
