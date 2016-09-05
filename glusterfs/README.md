@@ -3,8 +3,13 @@
 
 ```
 docker run \
--v local_pub_key:/key
---net=host
+-d \
+--net=host \
+--privileged=true \
+-v local_pub_key:/key \
+-v /data/glusterfs:/data/glusterfs \
+...
+
 ```
 
 
