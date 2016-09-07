@@ -8,6 +8,7 @@ docker run \
 --privileged=true \
 -v local_pub_key:/key \
 -v /data/glusterfs:/data/glusterfs \
+liubin/glusterfs
 ...
 
 ```
