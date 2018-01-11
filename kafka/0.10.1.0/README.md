@@ -35,5 +35,5 @@ docker exec kafka $KAFKA_HOME/bin/kafka-console-producer.sh --broker-list localh
 ### Consume messages
 
 ```
-docker exec kafka $KAFKA_HOME/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning
+docker exec kafka $KAFKA_HOME/bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic test --from-beginning
 ```
